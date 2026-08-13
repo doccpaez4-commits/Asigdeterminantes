@@ -1,0 +1,33 @@
+title: "Determinantes Sociales en Salud"
+short_title: "Determinantes Sociales en Salud"
+description: "Maestría en Salud Pública — Fundación Universitaria del Área Andina"
+program: "Maestría en Salud Pública"
+semester: "Semestre 2"
+credits: "3 créditos"
+baseurl: "/Asigdeterminantes"
+url: "https://doccpaez4-commits.github.io"
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+exclude:
+  - microcurriculo
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+nav:
+  - title: "🏠 Inicio"
+    url: /
+  - title: "🧭 Metodología"
+    url: /metodologia.html
+  - title: "🗓 Contenidos"
+    url: /contenidos.html
+  - title: "🗺️ Proyecto territorial"
+    url: /proyecto.html
+  - title: "📊 Evaluación"
+    url: /evaluacion.html
+  - title: "📚 Bibliografía"
+    url: /bibliografia.html
+  - title: "🧩 Rúbricas SOLO"
+    url: /rubricas.html
