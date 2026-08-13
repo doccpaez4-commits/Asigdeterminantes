@@ -11,7 +11,6 @@ title: Inicio
   <div class="stat-card"><div class="stat-icon">⏱</div><div class="stat-value">{{ site.data.curso.horas }} horas</div><div class="stat-label">3 créditos</div></div>
   <div class="stat-card"><div class="stat-icon">🗓</div><div class="stat-value">{{ site.data.curso.horario_general }}</div><div class="stat-label">Cada 15 días</div></div>
   <div class="stat-card"><div class="stat-icon">📍</div><div class="stat-value">{{ site.data.curso.salon }}</div><div class="stat-label">Presencial</div></div>
-  <div class="stat-card"><div class="stat-icon">👤</div><div class="stat-value">{{ site.data.curso.docente }}</div><div class="stat-label">Docente</div></div>
 </div>
 
 <p><a href="{{ '/contenidos.html' | relative_url }}">Ver el calendario completo de las 9 sesiones →</a></p>
@@ -55,7 +54,3 @@ Los determinantes sociales de la salud son una de las estrategias más important
 <div class="callout">
   <strong>Un curso sobre un mismo territorio, de principio a fin.</strong> Desde la sesión 1, cada grupo selecciona un territorio (barrio, comuna, vereda o resguardo) y trabaja sobre él en las tres entregas del semestre: diagnóstico, relectura crítica y propuesta integradora. Ver <a href="{{ '/proyecto.html' | relative_url }}">Proyecto territorial</a>.
 </div>
-
-## 🧑‍🏫 Perfil del docente
-
-Magíster en Salud Pública con experiencia en determinantes sociales y desarrollo territorial en salud.

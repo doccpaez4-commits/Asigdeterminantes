@@ -49,9 +49,3 @@ title: Metodología
 <div class="callout">
   Las tres entregas se califican sobre el <strong>mismo grupo de trabajo y territorio</strong>. Que la Entrega 2 retome realmente lo hallado en la Entrega 1, y que la Entrega 3 retome lo trabajado en la Entrega 2, es un criterio transversal de calidad que se pondera dentro de la argumentación de cada rúbrica. Ver <a href="{{ '/proyecto.html' | relative_url }}">Proyecto territorial</a>.
 </div>
-
-## 🧑‍🏫 Perfil del docente
-
-<div class="card">
-<p style="margin-bottom:0;">Magíster en Salud Pública con experiencia en determinantes sociales y desarrollo territorial en salud.</p>
-</div>
