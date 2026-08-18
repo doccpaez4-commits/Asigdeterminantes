@@ -15,6 +15,42 @@ title: Bibliografía
   <p style="margin-bottom:0; font-size:14px;">La primera aporta un instrumento reciente de indexación territorial de vulnerabilidad aplicado a una ciudad colombiana — pertinente para la Unidad 3 (planeación territorial). La segunda actualiza la Unidad 4 (innovación e IA) con una mirada situada en equidad.</p>
 </div>
 
+## 🗺️ Dos lentes para leer esta bibliografía: OMS vs. Breilh
+
+<p class="muted" style="font-size:13px; margin-top:-8px;">Toca cada lente para ver las referencias clave de cada enfoque.</p>
+
+<div class="dual-lens">
+  <div class="lens lens-a" data-expandable>
+    <span class="expand-toggle">+</span>
+    <span class="lens-icon">🏛️</span>
+    <div class="lens-title">Determinantes Sociales (OMS/CSDH)</div>
+    <div class="lens-desc">El marco operativo de la Comisión OMS: capas de determinantes estructurales e intermedios que orientan la política pública y la planeación territorial.</div>
+    <span class="expand-hint">Toca para ver las referencias clave</span>
+    <div class="lens-detail">
+      <strong>Referencias clave:</strong><br>
+      Commission on Social Determinants of Health (2005). <em>Action on the social determinants of health: learning from previous experiences.</em> Geneva: OMS.<br>
+      Solar, O., &amp; Irwin, A. (2010). <em>A Conceptual Framework for Action on the Social Determinants of Health.</em> Social Determinants of Health Discussion Paper 2 (Policy and Practice). Geneva: OMS.<br>
+      Organización Mundial de la Salud (2010). <em>Comisión sobre Determinantes Sociales de la Salud 2005-2008.</em> OMS.
+    </div>
+  </div>
+  <div class="lens-center">UNA MISMA<br>PREGUNTA</div>
+  <div class="lens lens-b" data-expandable>
+    <span class="expand-toggle">+</span>
+    <span class="lens-icon">🔗</span>
+    <div class="lens-title">Determinación Social (Breilh)</div>
+    <div class="lens-desc">Epidemiología crítica y Medicina Social Latinoamericana: la salud-enfermedad como proceso dialéctico, no como una cadena de causas y efectos.</div>
+    <span class="expand-hint">Toca para ver las referencias clave</span>
+    <div class="lens-detail">
+      <strong>Referencias clave:</strong><br>
+      Breilh, J. (2003). <em>Epidemiología crítica: ciencia emancipadora e interculturalidad.</em> Buenos Aires: Lugar Editorial.<br>
+      Breilh, J. (2013). La determinación social de la salud como herramienta de transformación hacia una nueva salud pública (salud colectiva). <em>Revista Facultad Nacional de Salud Pública, 31</em>(supl. 1), 13-27.<br>
+      Breilh, J. (2021). <em>Critical Epidemiology and the People's Health.</em> Oxford University Press.
+    </div>
+  </div>
+</div>
+
+<p class="muted" style="font-size:13px;">Las lecturas completas de ambos enfoques están organizadas por tema en las secciones siguientes; ver especialmente la tarjeta "Determinación social — el contrapunto crítico" en Fundamentos y modelos clásicos.</p>
+
 ## Bibliografía Área Andina
 
 <div class="lectura-theme">
