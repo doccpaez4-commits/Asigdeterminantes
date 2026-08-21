@@ -39,6 +39,12 @@ title: Inicio
   </div>
 </div>
 
+<div class="criteria-block" style="background:linear-gradient(135deg,#eef2ff,#f5f3ff); border-color:#c7d2fe;">
+<h3 style="color:#4338ca;">🧰 Herramienta interactiva — Epidemiología Crítica &amp; HiMupAC</h3>
+<p style="margin:0 0 10px; color:var(--ink);">Instrumento pedagógico de acceso gratuito para practicar la lente de la <strong>Determinación Social (DS)</strong> sobre un territorio real: aplica el modelo dialéctico de Jaime Breilh (dominios General – Particular – Singular) con módulos de Conceptos, Matriz, Síntesis, Praxis, HiMupAC, Evaluación y Glosario. Permite guardar y exportar el análisis — ideal para trabajar el mismo territorio del proyecto del curso.</p>
+<p style="margin:0;"><a href="https://doccpaez4-commits.github.io/epicritica/" target="_blank" rel="noopener"><strong>Abrir la herramienta →</strong></a></p>
+</div>
+
 ## 📖 Presentación
 
 Los determinantes sociales de la salud son una de las estrategias más importantes para proteger la salud de personas y comunidades: la salud pública no es un asunto exclusivo del sector salud, sino del trabajo articulado de todos los sectores sociales. Esta asignatura pone ese modelo en diálogo crítico con la determinación social de la salud, que interpreta la salud-enfermedad como un proceso dialéctico —no una cadena de causas y efectos.

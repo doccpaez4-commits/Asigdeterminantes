@@ -51,6 +51,12 @@ title: Bibliografía
 
 <p class="muted" style="font-size:13px;">Las lecturas completas de ambos enfoques están organizadas por tema en las secciones siguientes; ver especialmente la tarjeta "Determinación social — el contrapunto crítico" en Fundamentos y modelos clásicos.</p>
 
+<div class="criteria-block" style="background:linear-gradient(135deg,#eef2ff,#f5f3ff); border-color:#c7d2fe;">
+<h3 style="color:#4338ca;">🧰 Herramienta interactiva — Epidemiología Crítica &amp; HiMupAC</h3>
+<p style="margin:0 0 10px; color:var(--ink);">Instrumento pedagógico de acceso gratuito, desarrollado por el docente a partir de la obra de Jaime Breilh, para llevar la lente de la Determinación Social a la práctica sobre un territorio real (módulos de Conceptos, Matriz, Síntesis, Praxis, HiMupAC, Evaluación y Glosario, con opción de guardar/exportar el análisis).</p>
+<p style="margin:0;"><a href="https://doccpaez4-commits.github.io/epicritica/" target="_blank" rel="noopener"><strong>Abrir la herramienta →</strong></a></p>
+</div>
+
 ## Bibliografía Área Andina
 
 <div class="lectura-theme">
