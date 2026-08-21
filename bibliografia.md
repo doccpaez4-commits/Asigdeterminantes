@@ -28,9 +28,9 @@ title: Bibliografía
     <span class="expand-hint">Toca para ver las referencias clave</span>
     <div class="lens-detail">
       <strong>Referencias clave:</strong><br>
-      Commission on Social Determinants of Health (2005). <em>Action on the social determinants of health: learning from previous experiences.</em> Geneva: OMS.<br>
-      Solar, O., &amp; Irwin, A. (2010). <em>A Conceptual Framework for Action on the Social Determinants of Health.</em> Social Determinants of Health Discussion Paper 2 (Policy and Practice). Geneva: OMS.<br>
-      Organización Mundial de la Salud (2010). <em>Comisión sobre Determinantes Sociales de la Salud 2005-2008.</em> OMS.
+      Commission on Social Determinants of Health (2005). <em>Action on the social determinants of health: learning from previous experiences.</em> Geneva: OMS. <a href="https://www.who.int/publications/i/item/9789241500876" target="_blank" rel="noopener">who.int/publications/i/item/9789241500876</a><br>
+      Solar, O., &amp; Irwin, A. (2010). <em>A Conceptual Framework for Action on the Social Determinants of Health.</em> Social Determinants of Health Discussion Paper 2 (Policy and Practice). Geneva: OMS. <a href="https://www.who.int/publications/i/item/9789241500852" target="_blank" rel="noopener">who.int/publications/i/item/9789241500852</a><br>
+      Organización Mundial de la Salud (2010). <em>Comisión sobre Determinantes Sociales de la Salud 2005-2008.</em> OMS. <a href="https://www.who.int/initiatives/action-on-the-social-determinants-of-health-for-advancing-equity/world-report-on-social-determinants-of-health-equity/commission-on-social-determinants-of-health" target="_blank" rel="noopener">who.int — Commission on Social Determinants of Health</a>
     </div>
   </div>
   <div class="lens-center">UNA MISMA<br>PREGUNTA</div>
@@ -42,9 +42,9 @@ title: Bibliografía
     <span class="expand-hint">Toca para ver las referencias clave</span>
     <div class="lens-detail">
       <strong>Referencias clave:</strong><br>
-      Breilh, J. (2003). <em>Epidemiología crítica: ciencia emancipadora e interculturalidad.</em> Buenos Aires: Lugar Editorial.<br>
-      Breilh, J. (2013). La determinación social de la salud como herramienta de transformación hacia una nueva salud pública (salud colectiva). <em>Revista Facultad Nacional de Salud Pública, 31</em>(supl. 1), 13-27.<br>
-      Breilh, J. (2021). <em>Critical Epidemiology and the People's Health.</em> Oxford University Press.
+      Breilh, J. (2003). <em>Epidemiología crítica: ciencia emancipadora e interculturalidad.</em> Buenos Aires: Lugar Editorial. <a href="https://books.google.com/books/about/Epidemiolog%C3%ADa_cr%C3%ADtica.html?id=VVIgAQAAIAAJ" target="_blank" rel="noopener">Ficha del libro (Google Books)</a><br>
+      Breilh, J. (2013). La determinación social de la salud como herramienta de transformación hacia una nueva salud pública (salud colectiva). <em>Revista Facultad Nacional de Salud Pública, 31</em>(supl. 1), 13-27. <a href="https://doi.org/10.17533/udea.rfnsp.16637" target="_blank" rel="noopener">doi.org/10.17533/udea.rfnsp.16637</a> — acceso abierto<br>
+      Breilh, J. (2021). <em>Critical Epidemiology and the People's Health.</em> Oxford University Press. <a href="https://global.oup.com/academic/product/critical-epidemiology-and-the-peoples-health-9780190492786" target="_blank" rel="noopener">global.oup.com</a>
     </div>
   </div>
 </div>
