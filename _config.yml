@@ -31,3 +31,6 @@ nav:
     url: /bibliografia.html
   - title: "🧩 Rúbricas SOLO"
     url: /rubricas.html
+  - title: "🔍 Dos lentes: determinantes vs. determinación"
+    url: /herramientas/dos-lentes.html
+    class: nav-interactive

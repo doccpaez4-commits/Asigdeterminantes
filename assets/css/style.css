@@ -732,3 +732,28 @@ table.gp-table .gp-del-btn {
   .grading-panel { position: static; padding: 16px; }
   .gp-scores { grid-template-columns: repeat(2, 1fr); }
 }
+
+
+/* ── Acceso al espacio interactivo "Dos lentes" (último ítem del menú) ── */
+.sidebar-nav a.nav-interactive {
+  margin-top: 14px;
+  position: relative;
+  padding-right: 34px;
+  background: linear-gradient(90deg, rgba(46,111,142,.28), rgba(178,74,43,.28));
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,.16);
+}
+.sidebar-nav a.nav-interactive::before {
+  content: "";
+  position: absolute; left: 0; right: 0; top: -9px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.sidebar-nav a.nav-interactive::after {
+  content: "\2197";
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  font-size: 13px; opacity: .8;
+}
+.sidebar-nav a.nav-interactive:hover {
+  background: linear-gradient(90deg, rgba(46,111,142,.45), rgba(178,74,43,.45));
+}

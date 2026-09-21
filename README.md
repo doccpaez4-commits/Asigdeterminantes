@@ -15,6 +15,7 @@ Diálogo crítico entre Determinantes Sociales (DSS) y Determinación Social de 
 - `evaluacion.md` — criterios de evaluación
 - `rubricas.md` — rúbricas SOLO
 - `bibliografia.md` — bibliografía del curso
+- `herramientas/dos-lentes.html` — espacio interactivo *Determinantes vs. Determinación* (último ítem del menú lateral). Es una página autónoma con su propio diseño: panorama, esquemas, tabla comparativa, casos verificados, guía metodológica y guía de búsqueda de datos en Colombia. Incluye botón de salida que devuelve a la página del curso desde la que se entró y memoria de la última sección visitada. Fuente original: [DeterminantesvsDeterminacion](https://github.com/doccpaez4-commits/DeterminantesvsDeterminacion).
 
 ## Publicación
 

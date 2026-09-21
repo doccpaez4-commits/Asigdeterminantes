@@ -25,7 +25,7 @@
       </a>
       <nav class="sidebar-nav">
         {% for item in site.nav %}
-          <a href="{{ item.url | relative_url }}" class="{% if page.url == item.url %}active{% endif %}">{{ item.title }}</a>
+          <a href="{{ item.url | relative_url }}" class="{% if page.url == item.url %}active{% endif %}{% if item.class %} {{ item.class }}{% endif %}">{{ item.title }}</a>
         {% endfor %}
       </nav>
       <div class="sidebar-meta">{{ site.semester }} · {{ site.credits }}</div>
