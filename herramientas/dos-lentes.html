@@ -536,7 +536,8 @@
 
   .db-stage{position:relative;height:430px;perspective:1400px;outline:none;touch-action:pan-y;user-select:none;}
   .db-stage:focus-visible{box-shadow:0 0 0 2px var(--bgold);border-radius:18px;}
-  .db-ring{position:absolute;inset:0;transform-style:preserve-3d;}
+  /* el plano 3D no captura clics; las tarjetas laterales (detrás de él en z) sí deben recibirlos */
+  .db-ring{position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;}
   .db-card{
     position:absolute;left:50%;top:10px;width:min(440px,86vw);height:400px;margin-left:calc(min(440px,86vw) / -2);
     transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.8,.2,1), opacity .5s, filter .5s;cursor:pointer;

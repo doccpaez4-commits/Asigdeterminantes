@@ -116,7 +116,7 @@
   @media (max-width:700px){.setup-actions{position:static;}.setup-actions .btn{flex:1 1 auto;}}
 
   /* ================= ARENA ================= */
-  #arena{display:flex;flex-direction:column;height:100vh;min-height:620px;padding:14px 18px 12px;gap:10px;overflow:hidden;}
+  #arena{display:flex;flex-direction:column;height:100vh;min-height:620px;padding:14px 18px 12px;gap:10px;overflow:hidden;overflow:clip;}
   #arena::after{ /* borde de alerta */
     content:"";position:fixed;inset:0;pointer-events:none;z-index:4;border-radius:0;
     box-shadow:inset 0 0 0 0 transparent;transition:box-shadow .3s;
@@ -143,11 +143,13 @@
   @media (max-width:900px){.a-top{flex-wrap:wrap;}.q-banner{order:3;flex-basis:100%;}.a-top .brand span.t{display:none;}}
 
   /* escenario 3D */
-  .stage{flex:1;position:relative;perspective:1300px;min-height:0;}
-  .scene{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .25s ease-out;}
+  .stage{flex:1;position:relative;perspective:1300px;min-height:0;overflow:clip;}
+  /* el plano del escenario no debe capturar clics: en 3D, la mitad girada de cada podio queda «detrás» de él */
+  .scene{position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;}
+  .scene .podium{pointer-events:auto;}
   .floor{
     position:absolute;left:-30%;right:-30%;bottom:-8%;height:62%;
-    transform:rotateX(76deg);transform-origin:50% 100%;
+    transform:rotateX(76deg) translateX(calc(var(--px,0) * -40px));transform-origin:50% 100%;transition:transform .4s ease-out;
     background-image:
       linear-gradient(rgba(232,194,106,.16) 1px, transparent 1px),
       linear-gradient(90deg, rgba(232,194,106,.16) 1px, transparent 1px);
@@ -182,6 +184,9 @@
   .podium .tokens i{width:18px;height:18px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--g);transition:all .3s;}
   .podium .tokens i.used{background:transparent;border:2px dashed color-mix(in srgb,var(--c) 50%,transparent);box-shadow:none;}
   .podium .acts{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;}
+  /* dentro del podio girado en 3D, el «encogerse» al presionar desplazaba el área de clic y el clic se perdía */
+  .podium .btn, .podium .btn:active{transform:none;}
+  .podium .btn:active{filter:brightness(1.35);}
   .podium .base{height:26px;margin:0 8%;background:linear-gradient(var(--cd),#050807);border-radius:0 0 18px 18px;transform:rotateX(-30deg);transform-origin:top;box-shadow:0 20px 30px rgba(0,0,0,.6);}
   .podium.speaking .spot{opacity:1;}
   .podium.speaking .card3d{box-shadow:0 30px 70px rgba(0,0,0,.6), 0 0 50px 4px var(--g);}
@@ -191,7 +196,8 @@
 
   /* reloj central */
   .clock{
-    position:absolute;left:50%;top:44%;width:min(36vw,46vh,420px);aspect-ratio:1;transform:translate(-50%,-50%) translateZ(60px);
+    position:absolute;left:50%;top:44%;width:min(36vw,46vh,420px);aspect-ratio:1;
+    transform:translate(-50%,-50%) translateZ(60px) rotateY(calc(var(--px,0) * 10deg)) rotateX(calc(var(--py,0) * -8deg));transition:transform .4s ease-out;
     transform-style:preserve-3d;
   }
   .clock svg.ring{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 0 22px color-mix(in srgb,var(--state) 55%,transparent));transition:filter .4s;}
@@ -223,7 +229,7 @@
   /* pantallas angostas: el escenario pasa a columnas (reloj arriba, podios abajo) */
   @media (max-width:900px){
     .stage{perspective:none;flex:none;}
-    .scene{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px;transform:none !important;}
+    .scene{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
     .floor,.podium .spot,.podium .base,.semaforo{display:none;}
     .clock{position:relative;left:auto;top:auto;transform:none;order:-1;grid-column:1 / -1;justify-self:center;width:min(72vw,340px);margin:6px 0 4px;}
     .podium,.podium.a,.podium.b,.podium.a.speaking,.podium.b.speaking{position:relative;left:auto;right:auto;bottom:auto;width:auto;transform:none;margin-top:44px;}
@@ -252,7 +258,7 @@
   .ctrl .play:active{transform:scale(.93);}
   .ctrl .frenar{background:rgba(255,77,94,.14);border-color:rgba(255,77,94,.5);color:#FF8F99;}
 
-  .timeline{display:flex;gap:4px;align-items:stretch;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px;}
+  .timeline{position:relative;display:flex;gap:4px;align-items:stretch;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px;}
   .timeline .chip{flex:1 0 auto;min-width:84px;position:relative;padding:7px 10px 9px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--panel-b);cursor:pointer;text-align:left;overflow:hidden;transition:background .2s, transform .2s;}
   .timeline .chip::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c,var(--gold));}
   .timeline .chip .k{display:block;font-size:.66rem;font-weight:800;color:#fff;white-space:nowrap;}
@@ -617,7 +623,7 @@
   function show(id){
     screens.forEach(function(s){ $(s).hidden = s !== id; });
     document.body.dataset.screen = id;
-    if (id === 'arena') { requestAnimationFrame(renderArena); }
+    if (id === 'arena') renderArena();
     window.scrollTo(0, 0);
   }
   function unlocked(){ try { return sessionStorage.getItem('debate_ok') === '1'; } catch (e) { return false; } }
@@ -731,7 +737,13 @@
   });
   $('btnReset').addEventListener('click', function(){ if (confirm('¿Restaurar la configuración original?')) { cfg = defaults(); saveCfg(); buildSetup(); } });
   $('btnSave').addEventListener('click', function(){ readSetup(); saveCfg(); toast('💾', 'Configuración guardada en este navegador.', 'var(--go)'); });
-  $('btnStart').addEventListener('click', function(){ readSetup(); saveCfg(); newRun(); history.replaceState(null, '', location.pathname); show('arena'); });
+  $('btnStart').addEventListener('click', function(){
+    readSetup(); saveCfg();
+    var enCurso = run && run.started && !run.finished;
+    if (!enCurso || confirm('Hay un debate en curso. ¿Reiniciarlo con la nueva configuración?\n\nAceptar: empieza de cero con los nuevos tiempos.\nCancelar: vuelve al debate en curso (solo se actualizan nombres, alertas y sonido).')) newRun();
+    else toast('↩', 'Debate en curso conservado. Los nuevos tiempos se aplicarán en el próximo debate.', 'var(--gold)');
+    history.replaceState(null, '', location.pathname); show('arena');
+  });
 
   /* ---------------- motor del debate ---------------- */
   var run = null, raf = null;
@@ -740,7 +752,7 @@
     run = {
       phases: cfg.phases.map(function(p){ return { type:p.type, team:p.team, dur:p.dur, dyn:false }; }),
       idx: 0, remaining: cfg.phases[0].dur, running: false, endAt: 0, last: 0,
-      spoken: { A:0, B:0 }, used: [], pts: { A:0, B:0 }, rep: { A:cfg.repN, B:cfg.repN },
+      spoken: { A:0, B:0 }, used: [], pts: { A:0, B:0 }, repN: cfg.repN, rep: { A:cfg.repN, B:cfg.repN },
       qs: Q.filter(function(q){ return cfg.questions.indexOf(q.id) > -1; }), qi: 0,
       flags: {}, log: [], started: null, finished: false
     };
@@ -837,12 +849,16 @@
     if (!run) return;
     if (run.rep[t] <= 0) { toast('🚫', teamName(t) + ' ya no tiene réplicas disponibles.', 'var(--stop)'); return; }
     run.rep[t]--;
-    run.phases.splice(run.idx + 1, 0, { type:'Réplica', team:t, dur:cfg.repDur, dyn:true });
-    run.used.splice(run.idx + 1, 0, 0);
+    // en orden de llegada: va después de las réplicas que ya estaban en cola
+    var pos = run.idx + 1;
+    while (run.phases[pos] && run.phases[pos].dyn) pos++;
+    var enCola = pos - run.idx - 1;
+    run.phases.splice(pos, 0, { type:'Réplica', team:t, dur:cfg.repDur, dyn:true });
+    run.used.splice(pos, 0, 0);
     // las banderas por índice posteriores se desplazan: se limpian para evitar alertas cruzadas
     Object.keys(run.flags).forEach(function(k){ if (parseInt(k.replace(/\D/g, ''), 10) > run.idx) delete run.flags[k]; });
     logEv('↩ Réplica solicitada por ' + teamName(t));
-    toast('↩', 'Réplica de ' + teamName(t) + ' (' + fmt(cfg.repDur) + '): será el siguiente turno.', teamColor(t));
+    toast('↩', 'Réplica de ' + teamName(t) + ' (' + fmt(cfg.repDur) + '): ' + (enCola ? 'en cola, después de ' + enCola + ' réplica(s).' : 'será el siguiente turno.'), teamColor(t));
     beep(520, .1, 1);
     var ended = run.remaining <= 0;
     renderArena();
@@ -895,8 +911,9 @@
       return '<button type="button" class="chip' + (i < run.idx ? ' done' : '') + (i === run.idx ? ' now' : '') + (p.dyn ? ' dyn' : '') + '" data-i="' + i + '" style="--c:' + teamColor(p.team) + '">' +
         '<span class="k">' + esc(p.type) + '</span><span class="d">' + (p.team === 'AB' ? 'Ambos' : esc(teamName(p.team))) + ' · ' + fmt(p.dur) + '</span><span class="pg"></span></button>';
     }).join('');
-    var now = $('timeline').querySelector('.now');
-    if (now && now.scrollIntoView) now.scrollIntoView({ block:'nearest', inline:'center', behavior:'smooth' });
+    // centra el turno actual desplazando solo la línea de tiempo (scrollIntoView movía toda la arena)
+    var tl = $('timeline'), now = tl.querySelector('.now');
+    if (now) tl.scrollTo({ left: now.offsetLeft - tl.clientWidth / 2 + now.offsetWidth / 2, behavior: 'smooth' });
   }
   $('timeline').addEventListener('click', function(e){
     var c = e.target.closest('.chip'); if (!c) return;
@@ -914,7 +931,7 @@
       $('pts' + t).textContent = run.pts[t];
       $('ts' + t).textContent = run.pts[t];
       var tok = $('tok' + t), html = '';
-      for (var i = 0; i < cfg.repN; i++) html += '<i class="' + (i >= run.rep[t] ? 'used' : '') + '"></i>';
+      for (var i = 0; i < run.repN; i++) html += '<i class="' + (i >= run.rep[t] ? 'used' : '') + '"></i>';
       tok.innerHTML = html;
       $('rep' + t).disabled = run.rep[t] <= 0;
     });
@@ -976,7 +993,7 @@
     var neg = run.pts.A < 0 || run.pts.B < 0, base = neg ? 115 : 175, sc = neg ? 75 : 135, PH = 240;
     function col(x, t, c){
       var h = Math.abs(run.pts[t]) / pm * sc, y = run.pts[t] >= 0 ? base - h : base;
-      var usedR = cfg.repN - run.rep[t];
+      var usedR = run.repN - run.rep[t];
       return '<rect x="' + x + '" y="' + y.toFixed(1) + '" width="90" height="' + Math.max(2, h).toFixed(1) + '" rx="10" fill="' + c + '"/>' +
         '<text x="' + (x + 45) + '" y="' + (run.pts[t] >= 0 ? y - 8 : y + h + 18).toFixed(1) + '" text-anchor="middle" fill="#fff" font-size="20" font-weight="800" font-family="JetBrains Mono">' + run.pts[t] + '</text>' +
         '<text x="' + (x + 45) + '" y="' + (PH - 8) + '" text-anchor="middle" fill="#B4BEB0" font-size="12" font-family="Public Sans">' + esc(teamName(t)).slice(0, 20) + ' · ' + usedR + ' réplica(s)</text>';
@@ -1030,14 +1047,15 @@
     else if (k === 'f' || k === 'F') fullscreen();
   });
 
-  /* parallax 3D del escenario con el puntero */
-  var scene = $('scene');
-  $('stage').addEventListener('pointermove', function(e){
+  /* parallax 3D con el puntero: solo piso y reloj (sin botones), para que los podios no se muevan bajo el cursor */
+  var stage = $('stage');
+  stage.addEventListener('pointermove', function(e){
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var r = this.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-    scene.style.transform = 'rotateY(' + (x * 6).toFixed(2) + 'deg) rotateX(' + (-y * 4).toFixed(2) + 'deg)';
+    var r = this.getBoundingClientRect();
+    stage.style.setProperty('--px', ((e.clientX - r.left) / r.width - .5).toFixed(3));
+    stage.style.setProperty('--py', ((e.clientY - r.top) / r.height - .5).toFixed(3));
   });
-  $('stage').addEventListener('pointerleave', function(){ scene.style.transform = ''; });
+  stage.addEventListener('pointerleave', function(){ stage.style.setProperty('--px', 0); stage.style.setProperty('--py', 0); });
 
   /* ---------------- alertas visuales ---------------- */
   function toast(icon, msg, color){
