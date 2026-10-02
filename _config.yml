@@ -34,3 +34,6 @@ nav:
   - title: "🔍 Dos lentes: determinantes vs. determinación"
     url: /herramientas/dos-lentes.html
     class: nav-interactive
+  - title: "⚔️ Debate: determinantes vs. determinación"
+    url: /herramientas/dos-lentes.html#debate
+    class: nav-debate

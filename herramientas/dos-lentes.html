@@ -503,6 +503,122 @@
   /* ajuste movil: los DOI y URLs largos de referencias ahora hacen salto de linea */
   .ref-item{grid-template-columns:34px minmax(0,1fr);}
   .ref-item .rt, .ref-item .rt a, footer p, .case-cite, .doi-link{overflow-wrap:anywhere;}
+
+  /* ---------- 09 · Debate: carrusel 3D de preguntas provocadoras ---------- */
+  .navlinks a.nav-debate{color:#fff;background:linear-gradient(90deg,var(--dt),var(--dn));}
+  .navlinks a.nav-debate:hover,.navlinks a.nav-debate.active{color:#fff;filter:brightness(1.1);background:linear-gradient(90deg,var(--dt),var(--dn));}
+  .debate-band{
+    --bdt:#7FBEDD; --bdn:#E68C63; --bgold:#E8C26A;
+    position:relative;overflow:hidden;color:#EAEDE4;border-bottom:none;
+    background:
+      radial-gradient(ellipse 700px 420px at 10% 0%, rgba(46,111,142,.45), transparent 65%),
+      radial-gradient(ellipse 700px 460px at 95% 100%, rgba(178,74,43,.42), transparent 65%),
+      #0B1210;
+  }
+  .debate-band .wrap{position:relative;z-index:1;}
+  .debate-band .kicker{color:var(--bgold);}
+  .debate-band h2{color:#fff;}
+  .debate-band .sec-head .sub{color:#B7C0B2;}
+  .db-orbs i{position:absolute;border-radius:50%;filter:blur(60px);opacity:.35;animation:dbFloat 14s ease-in-out infinite alternate;}
+  .db-orbs i:nth-child(1){width:260px;height:260px;background:var(--bdt);left:-60px;top:30%;}
+  .db-orbs i:nth-child(2){width:300px;height:300px;background:var(--bdn);right:-80px;top:10%;animation-delay:-5s;}
+  .db-orbs i:nth-child(3){width:180px;height:180px;background:var(--bgold);left:45%;bottom:-60px;animation-delay:-9s;opacity:.18;}
+  @keyframes dbFloat{to{transform:translate(40px,-30px) scale(1.15);}}
+
+  .db-tension{display:flex;align-items:center;gap:14px;margin:-10px 0 26px;font-family:'JetBrains Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;}
+  .db-tension .t-dt{color:var(--bdt);} .db-tension .t-dn{color:var(--bdn);text-align:right;}
+  .db-tension .t-bar{flex:1;height:6px;border-radius:100px;background:linear-gradient(90deg,var(--bdt),var(--bgold),var(--bdn));position:relative;}
+  .db-tension .t-bar i{position:absolute;inset:-6px 0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);background-size:30% 100%;background-repeat:no-repeat;animation:dbSweep 3.2s linear infinite;border-radius:100px;mix-blend-mode:overlay;}
+  .db-tension .t-bar b{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:28px;height:28px;border-radius:50%;background:#0B1210;border:2px solid var(--bgold);display:flex;align-items:center;justify-content:center;font-size:.8rem;animation:dbPulse 1.8s ease-in-out infinite;}
+  @keyframes dbSweep{from{background-position:-30% 0;}to{background-position:130% 0;}}
+  @keyframes dbPulse{50%{box-shadow:0 0 0 8px rgba(232,194,106,.15);}}
+  @media (max-width:560px){.db-tension{font-size:.6rem;gap:8px;}}
+
+  .db-stage{position:relative;height:430px;perspective:1400px;outline:none;touch-action:pan-y;user-select:none;}
+  .db-stage:focus-visible{box-shadow:0 0 0 2px var(--bgold);border-radius:18px;}
+  .db-ring{position:absolute;inset:0;transform-style:preserve-3d;}
+  .db-card{
+    position:absolute;left:50%;top:10px;width:min(440px,86vw);height:400px;margin-left:calc(min(440px,86vw) / -2);
+    transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.8,.2,1), opacity .5s, filter .5s;cursor:pointer;
+  }
+  .db-card .face{
+    position:absolute;inset:0;border-radius:22px;padding:28px 28px 24px;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+    display:flex;flex-direction:column;overflow:hidden;
+    background:
+      radial-gradient(ellipse 120% 70% at 0% 0%, rgba(127,190,221,.20), transparent 60%),
+      radial-gradient(ellipse 120% 70% at 100% 100%, rgba(230,140,99,.18), transparent 60%),
+      linear-gradient(155deg,#1D2A26,#111916);
+    border:1px solid rgba(255,255,255,.16);
+    box-shadow:0 30px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.18);
+    transition:transform .7s cubic-bezier(.2,.8,.2,1);
+  }
+  .db-card .front::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.10) 50%,transparent 60%);transform:translateX(-100%);transition:transform 1s;}
+  .db-card.is-center .front::before{transform:translateX(100%);}
+  .db-card .back{transform:rotateY(180deg);background:linear-gradient(155deg,rgba(20,30,27,.96),rgba(12,18,16,.96));padding:22px;gap:10px;}
+  .db-card.flipped .front{transform:rotateY(-180deg);}
+  .db-card.flipped .back{transform:rotateY(0deg);}
+  .db-card .num{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--bgold);letter-spacing:.08em;}
+  .db-card .eje{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;margin:12px 0 18px;font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;padding:6px 12px;border-radius:100px;background:rgba(232,194,106,.14);color:var(--bgold);border:1px solid rgba(232,194,106,.3);}
+  .db-card .ico{font-size:2.6rem;line-height:1;margin-bottom:14px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.4));}
+  .db-card .q{font-family:'Fraunces',serif;font-weight:600;font-size:1.32rem;line-height:1.28;color:#fff;text-wrap:balance;}
+  .db-card .flip-hint{margin-top:auto;font-size:.76rem;color:#93A08F;display:flex;align-items:center;gap:6px;}
+  .db-card .lens{border-radius:14px;padding:12px 14px;font-size:.83rem;line-height:1.45;color:#DCE3D6;}
+  .db-card .lens b{display:block;font-family:'JetBrains Mono',monospace;font-size:.64rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px;}
+  .db-card .lens.a{background:rgba(127,190,221,.12);border-left:3px solid var(--bdt);} .db-card .lens.a b{color:var(--bdt);}
+  .db-card .lens.b{background:rgba(230,140,99,.12);border-left:3px solid var(--bdn);} .db-card .lens.b b{color:var(--bdn);}
+  .db-card .src{margin-top:auto;font-family:'JetBrains Mono',monospace;font-size:.62rem;color:#7E897C;}
+  @media (max-width:560px){ .db-stage{height:470px;} .db-card{height:450px;} .db-card .q{font-size:1.16rem;} .db-card .lens{font-size:.78rem;} }
+
+  .db-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:18px;}
+  .db-arrow{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;font-size:1.1rem;cursor:pointer;transition:background .15s, transform .15s;}
+  .db-arrow:hover{background:rgba(255,255,255,.16);transform:scale(1.06);}
+  .db-dots{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;max-width:60vw;}
+  .db-dots button{width:9px;height:9px;border-radius:100px;border:none;background:rgba(255,255,255,.25);cursor:pointer;padding:0;transition:width .3s, background .3s;}
+  .db-dots button[aria-selected="true"]{width:28px;background:linear-gradient(90deg,var(--bdt),var(--bdn));}
+  .db-hint{text-align:center;font-size:.76rem;color:#7E897C;margin-top:10px;}
+
+  .db-arena-cta{
+    margin-top:46px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;
+    padding:24px 26px;border-radius:20px;background:linear-gradient(120deg,rgba(127,190,221,.10),rgba(230,140,99,.10));
+    border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 50px rgba(0,0,0,.35);
+  }
+  .db-lock svg{width:64px;height:64px;animation:dbBob 3s ease-in-out infinite;}
+  @keyframes dbBob{50%{transform:translateY(-5px) rotate(-4deg);}}
+  .db-arena-txt .tagline{font-family:'JetBrains Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--bgold);}
+  .db-arena-txt h3{color:#fff;font-size:1.2rem;margin:4px 0 6px;}
+  .db-arena-txt p{font-size:.88rem;color:#B7C0B2;}
+  .db-arena-btns{display:flex;flex-direction:column;gap:10px;}
+  .db-go{background:linear-gradient(90deg,var(--bdt),var(--bdn));color:#0B1210;border:none;justify-content:center;font-size:.92rem;padding:14px 22px;box-shadow:0 10px 26px rgba(230,140,99,.3);}
+  .db-cfg{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3);justify-content:center;}
+  @media (max-width:760px){.db-arena-cta{grid-template-columns:1fr;text-align:center;justify-items:center;}}
+
+  .db-rules{margin-top:22px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);}
+  .db-rules summary{cursor:pointer;padding:16px 20px;font-weight:700;color:#fff;list-style:none;}
+  .db-rules summary::-webkit-details-marker{display:none;}
+  .db-rules summary::after{content:" +";color:var(--bgold);}
+  .db-rules[open] summary::after{content:" −";}
+  .db-rules ol{margin:0;padding:0 24px 20px 42px;display:grid;gap:8px;}
+  .db-rules li{font-size:.9rem;color:#B7C0B2;}
+  .db-rules li strong{color:#fff;}
+
+  .db-modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(5,9,8,.72);backdrop-filter:blur(8px);}
+  .db-modal[hidden]{display:none;}
+  .db-modal-card{
+    position:relative;width:min(400px,100%);padding:34px 30px 28px;border-radius:22px;text-align:center;color:#EAEDE4;
+    background:linear-gradient(160deg,#16221F,#0B1210);border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 80px rgba(0,0,0,.6);
+    animation:dbIn .35s cubic-bezier(.2,.8,.2,1);
+  }
+  @keyframes dbIn{from{opacity:0;transform:translateY(16px) scale(.96);}}
+  .db-modal-card.shake{animation:dbShake .4s;}
+  @keyframes dbShake{20%,60%{transform:translateX(-8px);}40%,80%{transform:translateX(8px);}}
+  .db-modal-icon{font-size:2.4rem;margin-bottom:6px;}
+  .db-modal-card h3{color:#fff;font-size:1.3rem;margin-bottom:6px;}
+  .db-modal-card p{font-size:.88rem;color:#B7C0B2;}
+  .db-modal-card input{width:100%;margin:18px 0 6px;padding:13px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:1rem;text-align:center;letter-spacing:.1em;}
+  .db-modal-card input:focus{outline:2px solid #E8C26A;outline-offset:1px;}
+  .db-err{min-height:1.3em;color:#F2A285 !important;font-size:.82rem !important;}
+  .db-enter{width:100%;justify-content:center;background:linear-gradient(90deg,#7FBEDD,#E68C63);color:#0B1210;border:none;font-size:.95rem;margin-top:6px;}
+  .db-x{position:absolute;top:10px;right:12px;border:none;background:none;color:#7E897C;font-size:1.5rem;cursor:pointer;}
 </style>
 </head>
 <body>
@@ -519,6 +635,7 @@
       <a href="#analizar">Para analizar</a>
       <a href="#metodo">Cómo analizar</a>
       <a href="#buscar">Buscar datos</a>
+      <a href="#debate" class="nav-debate">⚔ Debate</a>
       <a href="#glosario">Glosario</a>
       <a href="#referencias">Referencias</a>
     </div>
@@ -534,6 +651,7 @@
     <div class="hero-actions">
       <a href="#panorama" class="btn btn-primary">Empezar por el panorama →</a>
       <a href="#casos" class="btn btn-ghost">Ir directo a los casos</a>
+      <a href="#debate" class="btn btn-ghost">⚔ Ir al debate</a>
     </div>
     <div class="lens-row">
       <div class="lens-card a">
@@ -1437,10 +1555,77 @@
   </div>
 </section>
 
+<section id="debate" class="debate-band">
+  <div class="db-orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">09 · Debate</span>
+      <h2>¿Determinantes o determinación? Preguntas para encender el debate</h2>
+      <p class="sub">Doce preguntas provocadoras construidas a partir de este espacio y de la literatura del debate (Breilh, Navarro, Solar e Irwin, Morales-Borrero, Borde y Hernández, Krieger). Gira el carrusel, elige una y voltéala para ver cómo respondería cada lente. Prepárate: en clase te tocará defender una postura… quizás la que no compartes.</p>
+    </div>
+
+    <div class="db-tension" aria-hidden="true">
+      <span class="t-dt">Determinantes sociales</span>
+      <div class="t-bar"><i></i><b>⚡</b></div>
+      <span class="t-dn">Determinación social</span>
+    </div>
+
+    <div class="db-stage" id="dbStage" tabindex="0" aria-roledescription="carrusel" aria-label="Preguntas provocadoras del debate. Usa las flechas para navegar y Enter para voltear la tarjeta.">
+      <div class="db-ring" id="dbRing"></div>
+    </div>
+
+    <div class="db-controls">
+      <button type="button" class="db-arrow" id="dbPrev" aria-label="Pregunta anterior">&larr;</button>
+      <div class="db-dots" id="dbDots" role="tablist"></div>
+      <button type="button" class="db-arrow" id="dbNext" aria-label="Pregunta siguiente">&rarr;</button>
+    </div>
+    <p class="db-hint">Toca la tarjeta central para voltearla · arrastra o usa las flechas del teclado</p>
+
+    <div class="db-arena-cta">
+      <div class="db-lock" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><defs><linearGradient id="lkg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7FBEDD"/><stop offset="1" stop-color="#E68C63"/></linearGradient></defs><rect x="12" y="28" width="40" height="28" rx="7" fill="url(#lkg)"/><path d="M20 28v-7a12 12 0 0 1 24 0v7" fill="none" stroke="url(#lkg)" stroke-width="5" stroke-linecap="round"/><circle cx="32" cy="41" r="4" fill="#16221F"/><rect x="30.5" y="43" width="3" height="7" rx="1.5" fill="#16221F"/></svg>
+      </div>
+      <div class="db-arena-txt">
+        <span class="tagline">Arena del debate · acceso docente</span>
+        <h3>Cronómetro 3D, réplicas, semáforo y marcador de tensión</h3>
+        <p>La arena la abre el docente en el proyector: fija los tiempos de postura inicial, réplicas y cierre, y conduce el debate con alertas visuales y sonoras.</p>
+      </div>
+      <div class="db-arena-btns">
+        <button type="button" class="btn db-go" data-mode="play">▶ Iniciar debate</button>
+        <button type="button" class="btn db-cfg" data-mode="config">⚙ Configurar debate</button>
+      </div>
+    </div>
+
+    <details class="db-rules">
+      <summary>Reglas del juego (para estudiantes)</summary>
+      <ol>
+        <li><strong>Dos equipos, dos lentes.</strong> Uno defiende los determinantes sociales (OMS-CSDH); otro, la determinación social (epidemiología crítica). La asignación puede ser por sorteo.</li>
+        <li><strong>Postura inicial.</strong> Cada equipo planta su tesis en el tiempo fijado por el docente, sin interrupciones.</li>
+        <li><strong>Réplicas.</strong> Cada equipo tiene un número limitado de réplicas: úsalas para refutar un argumento concreto, no para repetir el tuyo.</li>
+        <li><strong>Evidencia o no cuenta.</strong> Todo argumento debe apoyarse en un autor, un caso verificado o un dato de tu territorio.</li>
+        <li><strong>Steelman.</strong> Antes de refutar, reformula el mejor argumento del otro equipo. Se refuta la idea, nunca a la persona.</li>
+        <li><strong>Cierre.</strong> Termina con una síntesis: ¿qué aprendiste de la otra lente que cambia tu proyecto territorial?</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<div class="db-modal" id="dbModal" role="dialog" aria-modal="true" aria-labelledby="dbModalTitle" hidden>
+  <form class="db-modal-card" id="dbForm" autocomplete="off">
+    <button type="button" class="db-x" id="dbClose" aria-label="Cerrar">&times;</button>
+    <div class="db-modal-icon" aria-hidden="true">🔐</div>
+    <h3 id="dbModalTitle">Acceso docente</h3>
+    <p id="dbModalSub">Escribe la clave para abrir la arena del debate.</p>
+    <input type="password" id="dbPass" placeholder="Clave del docente" aria-label="Clave del docente" required>
+    <p class="db-err" id="dbErr" role="alert"></p>
+    <button type="submit" class="btn db-enter">Entrar &rarr;</button>
+  </form>
+</div>
+
 <section id="glosario">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">09 · Glosario</span>
+      <span class="kicker">10 · Glosario</span>
       <h2>Términos clave</h2>
     </div>
     <dl class="gloss-grid">
@@ -1461,7 +1646,7 @@
 <section id="referencias">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">10 · Referencias</span>
+      <span class="kicker">11 · Referencias</span>
       <h2>Fuentes verificadas utilizadas en este espacio</h2>
       <p class="sub">Localizadas en PubMed/PMC y en los sitios de las revistas correspondientes. Todos los enlaces DOI son verificables.</p>
     </div>
@@ -1646,6 +1831,119 @@
     document.getElementById('resumeNo').addEventListener('click', hideResume);
     setTimeout(hideResume, 12000);
   }
+})();
+</script>
+<script src="debate-data.js"></script>
+<script>
+// ---------- 09 · Debate: carrusel 3D de preguntas + acceso docente a la arena ----------
+(function(){
+  var Q = window.DEBATE_PREGUNTAS || [], F = window.DEBATE_FUENTES || {};
+  var ring = document.getElementById('dbRing'), dots = document.getElementById('dbDots'), stage = document.getElementById('dbStage');
+  if (!ring || !Q.length) return;
+  function esc(t){ var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+  function autor(n){ var f = F[n] || ''; return f.split('.')[0].replace(/,.*$/, '') + ' ' + ((f.match(/(19|20)\d\d/) || [''])[0]); }
+
+  var cards = Q.map(function(p, i){
+    var c = document.createElement('article');
+    c.className = 'db-card';
+    c.setAttribute('aria-label', 'Pregunta ' + (i + 1) + ': ' + p.q);
+    c.innerHTML =
+      '<div class="face front">' +
+        '<span class="num">PREGUNTA ' + String(i + 1).padStart(2, '0') + ' / ' + Q.length + '</span>' +
+        '<span class="eje">' + esc(p.eje) + '</span>' +
+        '<div class="ico" aria-hidden="true">' + p.icono + '</div>' +
+        '<p class="q">' + esc(p.q) + '</p>' +
+        '<span class="flip-hint">↻ Voltear: ¿qué diría cada lente?</span>' +
+      '</div>' +
+      '<div class="face back">' +
+        '<div class="lens a"><b>Lente 1 · Determinantes sociales</b>' + esc(p.dss) + '</div>' +
+        '<div class="lens b"><b>Lente 2 · Determinación social</b>' + esc(p.ds) + '</div>' +
+        '<span class="src">Para profundizar: ' + p.fuentes.map(autor).join(' · ') + '</span>' +
+      '</div>';
+    ring.appendChild(c);
+    var d = document.createElement('button');
+    d.type = 'button'; d.setAttribute('role', 'tab'); d.setAttribute('aria-label', 'Ir a la pregunta ' + (i + 1));
+    d.addEventListener('click', function(){ go(i); });
+    dots.appendChild(d);
+    c.addEventListener('click', function(){
+      if (moved) return;
+      if (i === cur) c.classList.toggle('flipped'); else go(i);
+    });
+    return c;
+  });
+
+  var cur = 0, n = cards.length;
+  function layout(){
+    var w = stage.clientWidth, step = Math.min(w * 0.36, 300);
+    cards.forEach(function(c, i){
+      var d = i - cur;
+      if (d > n / 2) d -= n;
+      if (d < -n / 2) d += n;
+      var a = Math.abs(d);
+      c.style.transform = 'translateX(' + (d * step) + 'px) translateZ(' + (-a * 220) + 'px) rotateY(' + (-d * 32) + 'deg)';
+      c.style.opacity = a > 2 ? 0 : (a === 0 ? 1 : a === 1 ? .55 : .2);
+      c.style.filter = a === 0 ? 'none' : 'blur(' + a + 'px) saturate(.6)';
+      c.style.zIndex = 10 - a;
+      c.style.pointerEvents = a > 1 ? 'none' : 'auto';
+      c.classList.toggle('is-center', a === 0);
+      if (a !== 0) c.classList.remove('flipped');
+      dots.children[i].setAttribute('aria-selected', a === 0 ? 'true' : 'false');
+    });
+  }
+  function go(i){ cur = (i + n) % n; layout(); }
+  document.getElementById('dbPrev').addEventListener('click', function(){ go(cur - 1); });
+  document.getElementById('dbNext').addEventListener('click', function(){ go(cur + 1); });
+  stage.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(cur - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(cur + 1); }
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cards[cur].classList.toggle('flipped'); }
+  });
+  // arrastre / swipe
+  var x0 = null, moved = false;
+  stage.addEventListener('pointerdown', function(e){ x0 = e.clientX; moved = false; });
+  window.addEventListener('pointerup', function(e){
+    if (x0 === null) return;
+    var dx = e.clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) { moved = true; go(cur + (dx < 0 ? 1 : -1)); setTimeout(function(){ moved = false; }, 50); }
+  });
+  window.addEventListener('resize', layout);
+  layout();
+
+  // ---------- acceso docente ----------
+  var modal = document.getElementById('dbModal'), form = document.getElementById('dbForm'),
+      pass = document.getElementById('dbPass'), err = document.getElementById('dbErr'),
+      sub = document.getElementById('dbModalSub'), mode = 'play';
+  function target(){ return 'debate.html' + (mode === 'config' ? '#config' : ''); }
+  function open(m){
+    mode = m;
+    var ok = false;
+    try { ok = sessionStorage.getItem('debate_ok') === '1'; } catch (e) {}
+    if (ok) { location.href = target(); return; }
+    sub.textContent = m === 'config' ? 'Escribe la clave para configurar los tiempos del debate.' : 'Escribe la clave para abrir la arena del debate.';
+    err.textContent = ''; pass.value = '';
+    modal.hidden = false;
+    setTimeout(function(){ pass.focus(); }, 50);
+  }
+  function close(){ modal.hidden = true; }
+  document.querySelectorAll('.db-go, .db-cfg').forEach(function(b){
+    b.addEventListener('click', function(){ open(b.getAttribute('data-mode')); });
+  });
+  document.getElementById('dbClose').addEventListener('click', close);
+  modal.addEventListener('click', function(e){ if (e.target === modal) close(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !modal.hidden) close(); });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    window.debateVerificarClave(pass.value).then(function(ok){
+      if (ok) {
+        try { sessionStorage.setItem('debate_ok', '1'); } catch (er) {}
+        location.href = target();
+      } else {
+        err.textContent = 'Clave incorrecta. Esta sección es solo para el docente.';
+        form.classList.remove('shake'); void form.offsetWidth; form.classList.add('shake');
+        pass.select();
+      }
+    });
+  });
 })();
 </script>
 </body>
