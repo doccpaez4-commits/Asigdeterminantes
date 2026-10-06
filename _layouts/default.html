@@ -34,7 +34,7 @@
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
     <div class="main-area">
-      <main class="content">
+      <main class="content{% if page.wide %} content-wide{% endif %}">
         {{ content }}
       </main>
 

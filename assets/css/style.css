@@ -960,3 +960,17 @@ table.rubric thead th, table.gp-table thead th { background: linear-gradient(120
   .content { animation: none; }
   .card:hover, .unit-card:hover, .cut-card:hover, .stat-card:hover, .lectura-theme:hover, .sidebar-nav a:hover { transform: none; }
 }
+
+/* ── Páginas anchas (rúbricas): el contenido ocupa casi todo el ancho disponible ── */
+.content.content-wide { max-width: min(1760px, 100%); padding-left: clamp(20px, 3vw, 56px); padding-right: clamp(20px, 3vw, 56px); }
+.content-wide .rubric-wrap { margin-left: 0; margin-right: 0; }
+.content-wide table.rubric { min-width: 960px; table-layout: fixed; font-size: 14px; }
+.content-wide table.rubric th:first-child,
+.content-wide table.rubric td:first-child { width: 17%; min-width: 0; }
+.content-wide table.rubric .irc-score-col { width: 68px; min-width: 0; }
+.content-wide table.rubric .irc-crit-cell { min-width: 0; }
+.content-wide table.rubric .irc-opt-desc { font-size: 13.5px; line-height: 1.5; overflow-wrap: anywhere; }
+.content-wide table.rubric thead th { font-size: 13px; }
+.content-wide .grading-panel { max-width: none; }
+@media (min-width: 1500px) { .content-wide table.rubric { font-size: 15px; } .content-wide table.rubric .irc-opt-desc { font-size: 14.5px; } }
+@media (max-width: 900px) { .content.content-wide { padding-left: 14px; padding-right: 14px; } }

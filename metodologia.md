@@ -8,7 +8,7 @@ title: Metodología
 
 <div class="card">
 <p>La asignatura utiliza <strong>Aprendizaje Basado en Casos</strong> para el análisis de los determinantes sociales de la salud y su relación con indicadores de salud, políticas e instrumentos de planificación territorial, con enfoque poblacional en salud pública.</p>
-<p>El caso de estudio no es hipotético: es un <strong>territorio real</strong> —barrio, comuna, vereda o resguardo— elegido por cada grupo en la sesión 1, sobre el cual se construyen las tres entregas del semestre. Cada entrega es una capa analítica adicional sobre la anterior, no un trabajo independiente.</p>
+<p>El caso de estudio no es hipotético: es un <strong>territorio real</strong> —barrio, comuna, vereda o resguardo— elegido por cada grupo en la sesión 1, sobre el cual se desarrollan las tres actividades evaluadas del semestre. Cada una es una capa analítica adicional sobre la anterior, no un trabajo independiente.</p>
 </div>
 
 ## 🔄 La progresión pedagógica del semestre
@@ -27,25 +27,25 @@ title: Metodología
   <div class="cd-arrow">→</div>
   <div class="cd-node" data-expandable>
     <span class="expand-toggle">+</span>
-    <span class="cd-icon">💭</span>
-    <div class="cd-title">2. Explicar y criticar — Entrega 2</div>
-    <div class="cd-desc">Relectura desde la DS: ¿qué procesos —modos de vida, poder, historia— producen lo descrito en la Entrega 1?</div>
+    <span class="cd-icon">🗣️</span>
+    <div class="cd-title">2. Debatir — Debate en clase</div>
+    <div class="cd-desc">Dos equipos defienden cada lente (DSS y DS) ante preguntas provocadoras, con autores y ejemplos de la vida real.</div>
     <span class="expand-hint">Toca para ver más</span>
-    <div class="cd-detail">No se trata de "buscar las causas" del diagnóstico anterior, sino de leerlo como resultado de un proceso dialéctico entre lo general, lo particular y lo singular.</div>
+    <div class="cd-detail">Se prepara en el espacio Dos lentes → Debate y se desarrolla en clase con postura inicial, réplicas y cierre en tiempos definidos por el docente.</div>
   </div>
   <div class="cd-arrow">→</div>
   <div class="cd-node cd-highlight" data-expandable>
     <span class="expand-toggle">+</span>
-    <span class="cd-icon">🌱</span>
-    <div class="cd-title">3. Transformar — Entrega 3</div>
-    <div class="cd-desc">Propuesta integradora que dialoga entre ambos modelos, sustentada ante el curso.</div>
+    <span class="cd-icon">💭</span>
+    <div class="cd-title">3. Explicar y criticar — Entrega 3</div>
+    <div class="cd-desc">Relectura desde la DS: ¿qué procesos —modos de vida, poder, historia— producen lo descrito en la Entrega 1?</div>
     <span class="expand-hint">Toca para ver más</span>
-    <div class="cd-detail">Síntesis final: una propuesta de acción intersectorial y participativa que muestra dónde el lenguaje DSS y la lectura DS se complementan, y dónde se tensionan.</div>
+    <div class="cd-detail">No se trata de "buscar las causas" del diagnóstico, sino de leerlo como resultado de un proceso dialéctico entre lo general, lo particular y lo singular, apoyándose también en lo discutido en el debate.</div>
   </div>
 </div>
 
 ## 🔗 Una nota sobre la coherencia entre entregas
 
 <div class="callout">
-  Las tres entregas se califican sobre el <strong>mismo grupo de trabajo y territorio</strong>. Que la Entrega 2 retome realmente lo hallado en la Entrega 1, y que la Entrega 3 retome lo trabajado en la Entrega 2, es un criterio transversal de calidad que se pondera dentro de la argumentación de cada rúbrica. Ver <a href="{{ '/proyecto.html' | relative_url }}">Proyecto territorial</a>.
+  Las tres actividades se califican sobre el <strong>mismo grupo de trabajo y territorio</strong>. Que el debate se apoye realmente en lo hallado en la Entrega 1, y que la Entrega 3 retome lo trabajado en el diagnóstico y en el debate, es un criterio transversal de calidad que se pondera dentro de la argumentación de cada rúbrica. Ver <a href="{{ '/proyecto.html' | relative_url }}">Proyecto territorial</a>.
 </div>

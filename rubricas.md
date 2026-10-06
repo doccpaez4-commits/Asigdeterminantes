@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Rúbricas SOLO
+wide: true
 ---
 
 <h1>Rúbricas de evaluación — estilo SOLO</h1>
-<p class="lede">Structure of Observed Learning Outcomes — una rúbrica por entrega del proyecto territorial</p>
+<p class="lede">Structure of Observed Learning Outcomes — una rúbrica por cada actividad evaluada: diagnóstico, debate en clase y relectura crítica</p>
 
 <div class="card">
 <p>El modelo <strong>SOLO</strong> describe cinco niveles de complejidad creciente en el aprendizaje:</p>
@@ -24,7 +25,7 @@ title: Rúbricas SOLO
   </div>
   <div class="gp-scores">
     <div class="gp-score-item"><span class="gp-score-label">Entrega 1 (30%)</span><span class="gp-score-value" id="gp-score-0">—</span></div>
-    <div class="gp-score-item"><span class="gp-score-label">Entrega 2 (30%)</span><span class="gp-score-value" id="gp-score-1">—</span></div>
+    <div class="gp-score-item"><span class="gp-score-label">Debate (30%)</span><span class="gp-score-value" id="gp-score-1">—</span></div>
     <div class="gp-score-item"><span class="gp-score-label">Entrega 3 (40%)</span><span class="gp-score-value" id="gp-score-2">—</span></div>
     <div class="gp-score-item gp-final"><span class="gp-score-label">Nota final</span><span class="gp-score-value" id="gp-final">—</span></div>
   </div>
@@ -133,7 +134,7 @@ title: Rúbricas SOLO
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e0-c1" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">El mapa de determinantes anticipa qué elementos serán objeto de relectura crítica en la Entrega 2.</span>
+<span class="irc-opt-desc">El mapa de determinantes anticipa qué elementos serán objeto de relectura crítica en la Entrega 3.</span>
 </label>
 </td>
 <td class="irc-row-score">—</td>
@@ -252,20 +253,20 @@ title: Rúbricas SOLO
 <div class="irc-result" id="irubric-result-0">Sin calificar aún</div>
 
 <div class="rubric-activity">
-<h2>2. Entrega 2 · Relectura crítica desde la DS — Corte 2 (30%) · Sesión 7</h2>
-<p>Evalúa el tránsito del diagnóstico descriptivo a una lectura dialéctica del mismo territorio, sin caer en cadenas causa-efecto.</p>
+<h2>2. Debate en clase · Determinantes sociales vs. determinación social — Corte 2 (30%) · Sesión 7</h2>
+<p>Evalúa la participación del grupo en el debate que se prepara en el espacio <a href="{{ '/herramientas/dos-lentes.html#debate' | relative_url }}">Dos lentes → Debate</a>: cada equipo defiende una lente (DSS o DS) ante las preguntas provocadoras, con postura inicial, réplicas y cierre en los tiempos fijados por el docente.</p>
 <div class="weight-bar">
   <div class="w1" style="width:30%;">30%</div>
-  <div class="w2" style="width:30%;">30%</div>
+  <div class="w2" style="width:25%;">25%</div>
   <div class="w3" style="width:20%;">20%</div>
-  <div class="w4" style="width:10%;">10%</div>
+  <div class="w4" style="width:15%;">15%</div>
   <div class="w5" style="width:10%;">10%</div>
 </div>
 <div class="weight-legend">
-  <span><span class="dot" style="background:var(--teal-500);"></span>Comprensión del modelo de determinación social</span>
-  <span><span class="dot" style="background:var(--teal-700);"></span>Relectura crítica del diagnóstico previo</span>
-  <span><span class="dot" style="background:var(--amber);"></span>Articulación con planeación territorial</span>
-  <span><span class="dot" style="background:var(--navy-900);"></span>Calidad argumentativa</span>
+  <span><span class="dot" style="background:var(--teal-500);"></span>Argumentación</span>
+  <span><span class="dot" style="background:var(--teal-700);"></span>Calidad de autores y fuentes</span>
+  <span><span class="dot" style="background:var(--amber);"></span>Uso de ejemplos de la vida real</span>
+  <span><span class="dot" style="background:var(--navy-900);"></span>Réplica y escucha activa</span>
   <span><span class="dot" style="background:#5eb3a8;"></span>Trabajo colaborativo</span>
 </div>
 </div>
@@ -284,144 +285,144 @@ title: Rúbricas SOLO
 <tbody>
 <tr class="irc" data-weight="30">
 <td class="irc-crit-cell">
-<span class="irc-name">Comprensión del modelo de determinación social</span><span class="irc-weight">30%</span>
+<span class="irc-name">Argumentación</span><span class="irc-weight">30%</span>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c0" data-level="1" data-score="1.0">
-<span class="irc-opt-desc">Confunde determinación social con determinantes sociales, o no logra explicar el modelo.</span>
+<span class="irc-opt-desc">Expresa opiniones sin una tesis clara ni razones; no se distingue qué lente está defendiendo.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c0" data-level="2" data-score="2.0">
-<span class="irc-opt-desc">Define la determinación social de forma general, sin distinguir sus tres dimensiones.</span>
+<span class="irc-opt-desc">Enuncia una tesis y ofrece una sola razón, sin conectarla con la lente asignada ni con la pregunta provocadora.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c0" data-level="3" data-score="3.0">
-<span class="irc-opt-desc">Menciona las dimensiones general, particular y singular, pero las trata como una lista, no como un proceso relacional.</span>
+<span class="irc-opt-desc">Presenta varias razones a favor de su postura, listadas sin jerarquizar ni conectar entre sí.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c0" data-level="4" data-score="4.0">
-<span class="irc-opt-desc">Explica las tres dimensiones como un proceso dialéctico interconectado, distinguiéndolo explícitamente de una cadena causa-efecto.</span>
+<span class="irc-opt-desc">Articula tesis, razones y evidencia en un hilo coherente y muestra por qué su lente explica mejor el problema planteado en la pregunta.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c0" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">Usa el modelo de determinación social para cuestionar los límites del modelo DSS aplicado en la Entrega 1, con dominio del debate Medicina Social Latinoamericana / Salud Colectiva.</span>
+<span class="irc-opt-desc">Reconoce los límites de su propia postura, anticipa objeciones y cierra con una conclusión o síntesis que otro grupo podría usar para analizar su territorio.</span>
 </label>
 </td>
 <td class="irc-row-score">—</td>
 </tr>
-<tr class="irc" data-weight="30">
+<tr class="irc" data-weight="25">
 <td class="irc-crit-cell">
-<span class="irc-name">Relectura crítica del diagnóstico previo</span><span class="irc-weight">30%</span>
+<span class="irc-name">Calidad de autores y fuentes</span><span class="irc-weight">25%</span>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c1" data-level="1" data-score="1.0">
-<span class="irc-opt-desc">Repite el diagnóstico de la Entrega 1 sin relectura ni novedad.</span>
+<span class="irc-opt-desc">No cita autores, o cita fuentes no verificables («dicen que…», páginas sin autoría).</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c1" data-level="2" data-score="2.0">
-<span class="irc-opt-desc">Señala un aspecto del diagnóstico anterior que podría revisarse, sin desarrollarlo.</span>
+<span class="irc-opt-desc">Cita un solo autor, sin precisar obra ni año, o lo atribuye a la lente equivocada.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c1" data-level="3" data-score="3.0">
-<span class="irc-opt-desc">Reinterpreta varios determinantes identificados en la Entrega 1 desde categorías de determinación social, de forma parcial.</span>
+<span class="irc-opt-desc">Cita varios autores pertinentes (p. ej. Solar e Irwin, Marmot, Breilh, Navarro), pero como adorno, sin explicar qué sostiene cada uno.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c1" data-level="4" data-score="4.0">
-<span class="irc-opt-desc">La relectura muestra cómo los determinantes de la Entrega 1 son expresión de modos de vida, poder e historia — no causas aisladas.</span>
+<span class="irc-opt-desc">Usa los autores con precisión (obra, año, idea central) para respaldar argumentos concretos, incluida la lectura del autor que representa la lente opuesta.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c1" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">La relectura genera preguntas o hipótesis nuevas que orientan explícitamente la propuesta de la Entrega 3.</span>
+<span class="irc-opt-desc">Contrasta autores de ambas tradiciones con fuentes recientes verificables (artículos con DOI o PMID) y evalúa sus límites, no solo su autoridad.</span>
 </label>
 </td>
 <td class="irc-row-score">—</td>
 </tr>
 <tr class="irc" data-weight="20">
 <td class="irc-crit-cell">
-<span class="irc-name">Articulación con instrumentos de planeación territorial</span><span class="irc-weight">20%</span>
+<span class="irc-name">Uso de ejemplos de la vida real</span><span class="irc-weight">20%</span>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c2" data-level="1" data-score="1.0">
-<span class="irc-opt-desc">No menciona ningún instrumento de planeación (ASIS, PDSP, POT).</span>
+<span class="irc-opt-desc">No ofrece ejemplos, o son hipotéticos y genéricos.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c2" data-level="2" data-score="2.0">
-<span class="irc-opt-desc">Menciona un instrumento sin analizarlo.</span>
+<span class="irc-opt-desc">Ofrece un ejemplo anecdótico sin relación con la tesis.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c2" data-level="3" data-score="3.0">
-<span class="irc-opt-desc">Revisa uno o más instrumentos y describe su contenido, sin compararlo con la relectura crítica.</span>
+<span class="irc-opt-desc">Ofrece varios ejemplos reales (casos, datos, noticias), pero sin explicar qué muestran frente a su postura.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c2" data-level="4" data-score="4.0">
-<span class="irc-opt-desc">Compara el lenguaje técnico de los instrumentos con la lectura de determinación social, señalando coincidencias y omisiones.</span>
+<span class="irc-opt-desc">Usa ejemplos reales —preferiblemente del territorio del proyecto— que ilustran cómo opera su argumento, con datos o fuentes verificables.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c2" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">Propone cómo los instrumentos de planeación podrían incorporar una lectura de determinación social, con argumentos viables para el contexto institucional real.</span>
+<span class="irc-opt-desc">Escoge ejemplos que ponen a prueba su propia postura y muestra cómo cambia la lectura del territorio según la lente, con implicaciones para la acción.</span>
 </label>
 </td>
 <td class="irc-row-score">—</td>
 </tr>
-<tr class="irc" data-weight="10">
+<tr class="irc" data-weight="15">
 <td class="irc-crit-cell">
-<span class="irc-name">Calidad argumentativa y documento comparativo</span><span class="irc-weight">10%</span>
+<span class="irc-name">Réplica y escucha activa</span><span class="irc-weight">15%</span>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c3" data-level="1" data-score="1.0">
-<span class="irc-opt-desc">El documento no compara la Entrega 1 y la Entrega 2, o carece de estructura argumentativa.</span>
+<span class="irc-opt-desc">No responde a los argumentos del otro equipo o los distorsiona.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c3" data-level="2" data-score="2.0">
-<span class="irc-opt-desc">Presenta ambas entregas yuxtapuestas sin comparación explícita.</span>
+<span class="irc-opt-desc">Responde a un solo argumento, a la defensiva, sin reconocer lo que dijo el otro equipo.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c3" data-level="3" data-score="3.0">
-<span class="irc-opt-desc">Compara puntualmente algunos elementos entre ambas entregas.</span>
+<span class="irc-opt-desc">Responde a varios argumentos, pero repite su postura en lugar de refutar.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c3" data-level="4" data-score="4.0">
-<span class="irc-opt-desc">El documento comparativo argumenta de forma coherente las diferencias entre ambas lecturas del mismo territorio.</span>
+<span class="irc-opt-desc">Reformula con fidelidad el argumento del otro equipo y lo refuta o matiza con razones y evidencia, dentro del tiempo asignado.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c3" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">La argumentación es transferible: podría orientar a otro grupo a comparar sus propios diagnósticos DSS/DS.</span>
+<span class="irc-opt-desc">Reconoce un punto válido de la otra lente, ajusta su posición y formula una síntesis o una pregunta nueva que hace avanzar el debate.</span>
 </label>
 </td>
 <td class="irc-row-score">—</td>
@@ -433,31 +434,31 @@ title: Rúbricas SOLO
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c4" data-level="1" data-score="1.0">
-<span class="irc-opt-desc">Sin evidencia de trabajo compartido.</span>
+<span class="irc-opt-desc">Un solo integrante sostiene el debate; sin preparación compartida.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c4" data-level="2" data-score="2.0">
-<span class="irc-opt-desc">Participación desigual entre integrantes.</span>
+<span class="irc-opt-desc">Participación desigual: solo algunos integrantes intervienen.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c4" data-level="3" data-score="3.0">
-<span class="irc-opt-desc">Participación de todos en tareas separadas.</span>
+<span class="irc-opt-desc">Todos intervienen, pero cada quien presenta su parte por separado.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c4" data-level="4" data-score="4.0">
-<span class="irc-opt-desc">Tareas complementarias integradas en un producto coherente.</span>
+<span class="irc-opt-desc">Roles y turnos coordinados: los integrantes se complementan y respetan los tiempos del debate.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e1-c4" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">El grupo ajusta su forma de organización con base en lo aprendido en la Entrega 1.</span>
+<span class="irc-opt-desc">El equipo se apoya mutuamente durante las réplicas y reflexiona sobre su preparación y su desempeño.</span>
 </label>
 </td>
 <td class="irc-row-score">—</td>
@@ -468,23 +469,21 @@ title: Rúbricas SOLO
 <div class="irc-result" id="irubric-result-1">Sin calificar aún</div>
 
 <div class="rubric-activity">
-<h2>3. Entrega 3 · Propuesta integradora de acción territorial — Corte 3 (40%) · Sesión 9</h2>
-<p>Evalúa la síntesis final: una propuesta viable que dialoga explícitamente entre los dos modelos comprensivos y se sustenta oralmente.</p>
+<h2>3. Entrega 3 · Relectura crítica desde la DS — Corte 3 (40%) · Sesión 9</h2>
+<p>Evalúa el tránsito del diagnóstico descriptivo (Entrega 1) y de lo discutido en el debate a una lectura dialéctica del mismo territorio, sin caer en cadenas causa-efecto.</p>
 <div class="weight-bar">
-  <div class="w1" style="width:25%;">25%</div>
-  <div class="w2" style="width:25%;">25%</div>
-  <div class="w3" style="width:15%;">15%</div>
-  <div class="w4" style="width:15%;">15%</div>
+  <div class="w1" style="width:30%;">30%</div>
+  <div class="w2" style="width:30%;">30%</div>
+  <div class="w3" style="width:20%;">20%</div>
+  <div class="w4" style="width:10%;">10%</div>
   <div class="w5" style="width:10%;">10%</div>
-  <div class="w6" style="width:10%;">10%</div>
 </div>
 <div class="weight-legend">
-  <span><span class="dot" style="background:var(--teal-500);"></span>Pertinencia y viabilidad</span>
-  <span><span class="dot" style="background:var(--teal-700);"></span>Diálogo crítico DSS/DS</span>
-  <span><span class="dot" style="background:var(--amber);"></span>Enfoque intersectorial y participativo</span>
-  <span><span class="dot" style="background:var(--navy-900);"></span>Reflexión crítica sobre IA/priorización</span>
-  <span><span class="dot" style="background:#5eb3a8;"></span>Sustentación oral</span>
-  <span><span class="dot" style="background:#94a3b8;"></span>Trabajo colaborativo</span>
+  <span><span class="dot" style="background:var(--teal-500);"></span>Comprensión del modelo de determinación social</span>
+  <span><span class="dot" style="background:var(--teal-700);"></span>Relectura crítica del diagnóstico previo</span>
+  <span><span class="dot" style="background:var(--amber);"></span>Articulación con planeación territorial</span>
+  <span><span class="dot" style="background:var(--navy-900);"></span>Calidad argumentativa</span>
+  <span><span class="dot" style="background:#5eb3a8;"></span>Trabajo colaborativo</span>
 </div>
 </div>
 
@@ -500,182 +499,146 @@ title: Rúbricas SOLO
 <th class="irc-score-col">Nota</th>
 </tr></thead>
 <tbody>
-<tr class="irc" data-weight="25">
+<tr class="irc" data-weight="30">
 <td class="irc-crit-cell">
-<span class="irc-name">Pertinencia y viabilidad de la propuesta</span><span class="irc-weight">25%</span>
+<span class="irc-name">Comprensión del modelo de determinación social</span><span class="irc-weight">30%</span>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c0" data-level="1" data-score="1.0">
-<span class="irc-opt-desc">La propuesta es genérica, no responde al territorio trabajado o es inviable.</span>
+<span class="irc-opt-desc">Confunde determinación social con determinantes sociales, o no logra explicar el modelo.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c0" data-level="2" data-score="2.0">
-<span class="irc-opt-desc">Responde a un solo determinante o problema, sin considerar el territorio en conjunto.</span>
+<span class="irc-opt-desc">Define la determinación social de forma general, sin distinguir sus tres dimensiones.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c0" data-level="3" data-score="3.0">
-<span class="irc-opt-desc">Aborda varios determinantes identificados en las entregas anteriores, con viabilidad parcialmente justificada.</span>
+<span class="irc-opt-desc">Menciona las dimensiones general, particular y singular, pero las trata como una lista, no como un proceso relacional.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c0" data-level="4" data-score="4.0">
-<span class="irc-opt-desc">Se articula explícitamente con los hallazgos de la Entrega 1 y la Entrega 2, con recursos y actores viables para el territorio.</span>
+<span class="irc-opt-desc">Explica las tres dimensiones como un proceso dialéctico interconectado, distinguiéndolo explícitamente de una cadena causa-efecto.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c0" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">Incluye una estrategia de sostenibilidad o escalamiento, pensada para actores reales del territorio.</span>
+<span class="irc-opt-desc">Usa el modelo de determinación social para cuestionar los límites del modelo DSS aplicado en la Entrega 1, con dominio del debate Medicina Social Latinoamericana / Salud Colectiva.</span>
 </label>
 </td>
 <td class="irc-row-score">—</td>
 </tr>
-<tr class="irc" data-weight="25">
+<tr class="irc" data-weight="30">
 <td class="irc-crit-cell">
-<span class="irc-name">Diálogo crítico entre modelos DSS/DS</span><span class="irc-weight">25%</span>
+<span class="irc-name">Relectura crítica del diagnóstico previo</span><span class="irc-weight">30%</span>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c1" data-level="1" data-score="1.0">
-<span class="irc-opt-desc">No hay diálogo entre los dos modelos; se usa solo uno.</span>
+<span class="irc-opt-desc">Repite el diagnóstico de la Entrega 1 sin relectura ni novedad.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c1" data-level="2" data-score="2.0">
-<span class="irc-opt-desc">Se mencionan ambos modelos sin ponerlos en relación.</span>
+<span class="irc-opt-desc">Señala un aspecto del diagnóstico anterior que podría revisarse, sin desarrollarlo.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c1" data-level="3" data-score="3.0">
-<span class="irc-opt-desc">Se identifican aportes y límites de cada modelo por separado.</span>
+<span class="irc-opt-desc">Reinterpreta varios determinantes identificados en la Entrega 1 desde categorías de determinación social, de forma parcial.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c1" data-level="4" data-score="4.0">
-<span class="irc-opt-desc">La propuesta muestra explícitamente dónde el lenguaje DSS y la lectura DS se complementan y dónde se tensionan.</span>
+<span class="irc-opt-desc">La relectura muestra cómo los determinantes de la Entrega 1 son expresión de modos de vida, poder e historia — no causas aisladas.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c1" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">El diálogo crítico entre modelos se convierte en un argumento metodológico transferible a otros territorios o problemas de salud pública.</span>
+<span class="irc-opt-desc">La relectura genera preguntas o hipótesis nuevas que orientan explícitamente la acción en el territorio.</span>
 </label>
 </td>
 <td class="irc-row-score">—</td>
 </tr>
-<tr class="irc" data-weight="15">
+<tr class="irc" data-weight="20">
 <td class="irc-crit-cell">
-<span class="irc-name">Enfoque intersectorial y participativo</span><span class="irc-weight">15%</span>
+<span class="irc-name">Articulación con instrumentos de planeación territorial</span><span class="irc-weight">20%</span>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c2" data-level="1" data-score="1.0">
-<span class="irc-opt-desc">La propuesta depende exclusivamente del sector salud, sin considerar otros actores.</span>
+<span class="irc-opt-desc">No menciona ningún instrumento de planeación (ASIS, PDSP, POT).</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c2" data-level="2" data-score="2.0">
-<span class="irc-opt-desc">Menciona un actor o sector adicional sin desarrollar su rol.</span>
+<span class="irc-opt-desc">Menciona un instrumento sin analizarlo.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c2" data-level="3" data-score="3.0">
-<span class="irc-opt-desc">Identifica varios sectores y actores relevantes, sin definir mecanismos concretos de participación.</span>
+<span class="irc-opt-desc">Revisa uno o más instrumentos y describe su contenido, sin compararlo con la relectura crítica.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c2" data-level="4" data-score="4.0">
-<span class="irc-opt-desc">Define roles y mecanismos de participación intersectorial y comunitaria coherentes con el territorio.</span>
+<span class="irc-opt-desc">Compara el lenguaje técnico de los instrumentos con la lectura de determinación social, señalando coincidencias y omisiones.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
 <input type="radio" name="determinantes-e2-c2" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">Anticipa posibles tensiones o resistencias intersectoriales y plantea cómo abordarlas.</span>
-</label>
-</td>
-<td class="irc-row-score">—</td>
-</tr>
-<tr class="irc" data-weight="15">
-<td class="irc-crit-cell">
-<span class="irc-name">Reflexión crítica sobre IA/priorización</span><span class="irc-weight">15%</span>
-</td>
-<td class="irc-opt">
-<label>
-<input type="radio" name="determinantes-e2-c3" data-level="1" data-score="1.0">
-<span class="irc-opt-desc">No hay reflexión sobre herramientas de IA o priorización, o se asumen sin cuestionamiento.</span>
-</label>
-</td>
-<td class="irc-opt">
-<label>
-<input type="radio" name="determinantes-e2-c3" data-level="2" data-score="2.0">
-<span class="irc-opt-desc">Menciona una herramienta sin analizar su pertinencia para el territorio.</span>
-</label>
-</td>
-<td class="irc-opt">
-<label>
-<input type="radio" name="determinantes-e2-c3" data-level="3" data-score="3.0">
-<span class="irc-opt-desc">Describe ventajas y limitaciones generales de estas herramientas.</span>
-</label>
-</td>
-<td class="irc-opt">
-<label>
-<input type="radio" name="determinantes-e2-c3" data-level="4" data-score="4.0">
-<span class="irc-opt-desc">Analiza críticamente qué aportan y qué invisibilizan estas herramientas, en diálogo con la lectura de determinación social.</span>
-</label>
-</td>
-<td class="irc-opt">
-<label>
-<input type="radio" name="determinantes-e2-c3" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">Propone criterios propios para el uso ético y situado de estas herramientas en la planeación territorial.</span>
+<span class="irc-opt-desc">Propone cómo los instrumentos de planeación podrían incorporar una lectura de determinación social, con argumentos viables para el contexto institucional real.</span>
 </label>
 </td>
 <td class="irc-row-score">—</td>
 </tr>
 <tr class="irc" data-weight="10">
 <td class="irc-crit-cell">
-<span class="irc-name">Sustentación oral</span><span class="irc-weight">10%</span>
+<span class="irc-name">Calidad argumentativa y documento comparativo</span><span class="irc-weight">10%</span>
 </td>
 <td class="irc-opt">
 <label>
-<input type="radio" name="determinantes-e2-c4" data-level="1" data-score="1.0">
-<span class="irc-opt-desc">No logra comunicar la propuesta con claridad ante el grupo.</span>
+<input type="radio" name="determinantes-e2-c3" data-level="1" data-score="1.0">
+<span class="irc-opt-desc">El documento no compara el diagnóstico (Entrega 1) con la relectura, o carece de estructura argumentativa.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
-<input type="radio" name="determinantes-e2-c4" data-level="2" data-score="2.0">
-<span class="irc-opt-desc">Presenta la propuesta de forma lineal, sin responder con solvencia a preguntas.</span>
+<input type="radio" name="determinantes-e2-c3" data-level="2" data-score="2.0">
+<span class="irc-opt-desc">Presenta ambas lecturas yuxtapuestas sin comparación explícita.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
-<input type="radio" name="determinantes-e2-c4" data-level="3" data-score="3.0">
-<span class="irc-opt-desc">Comunica con claridad los elementos de la propuesta, con respuestas parciales a las preguntas del grupo.</span>
+<input type="radio" name="determinantes-e2-c3" data-level="3" data-score="3.0">
+<span class="irc-opt-desc">Compara puntualmente algunos elementos entre ambas lecturas.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
-<input type="radio" name="determinantes-e2-c4" data-level="4" data-score="4.0">
-<span class="irc-opt-desc">Sustenta con dominio conceptual y articula las preguntas del grupo con los hallazgos de las tres entregas.</span>
+<input type="radio" name="determinantes-e2-c3" data-level="4" data-score="4.0">
+<span class="irc-opt-desc">El documento comparativo argumenta de forma coherente las diferencias entre ambas lecturas del mismo territorio.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
-<input type="radio" name="determinantes-e2-c4" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">La sustentación genera discusión genuina en el grupo, con capacidad de defender y matizar la propuesta ante objeciones.</span>
+<input type="radio" name="determinantes-e2-c3" data-level="5" data-score="5.0">
+<span class="irc-opt-desc">La argumentación es transferible: podría orientar a otro grupo a comparar sus propios diagnósticos DSS/DS.</span>
 </label>
 </td>
 <td class="irc-row-score">—</td>
@@ -686,32 +649,32 @@ title: Rúbricas SOLO
 </td>
 <td class="irc-opt">
 <label>
-<input type="radio" name="determinantes-e2-c5" data-level="1" data-score="1.0">
-<span class="irc-opt-desc">Sin evidencia de trabajo compartido en el cierre del proceso.</span>
+<input type="radio" name="determinantes-e2-c4" data-level="1" data-score="1.0">
+<span class="irc-opt-desc">Sin evidencia de trabajo compartido.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
-<input type="radio" name="determinantes-e2-c5" data-level="2" data-score="2.0">
-<span class="irc-opt-desc">Participación desigual en la propuesta final.</span>
+<input type="radio" name="determinantes-e2-c4" data-level="2" data-score="2.0">
+<span class="irc-opt-desc">Participación desigual entre integrantes.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
-<input type="radio" name="determinantes-e2-c5" data-level="3" data-score="3.0">
-<span class="irc-opt-desc">Todos participan en tareas separadas de la propuesta.</span>
+<input type="radio" name="determinantes-e2-c4" data-level="3" data-score="3.0">
+<span class="irc-opt-desc">Participación de todos en tareas separadas.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
-<input type="radio" name="determinantes-e2-c5" data-level="4" data-score="4.0">
-<span class="irc-opt-desc">Integración coherente del trabajo de los tres cortes.</span>
+<input type="radio" name="determinantes-e2-c4" data-level="4" data-score="4.0">
+<span class="irc-opt-desc">Tareas complementarias integradas en un producto coherente.</span>
 </label>
 </td>
 <td class="irc-opt">
 <label>
-<input type="radio" name="determinantes-e2-c5" data-level="5" data-score="5.0">
-<span class="irc-opt-desc">El grupo reflexiona explícitamente sobre su propio proceso colaborativo a lo largo del semestre.</span>
+<input type="radio" name="determinantes-e2-c4" data-level="5" data-score="5.0">
+<span class="irc-opt-desc">El grupo ajusta su forma de organización con base en lo aprendido en la Entrega 1 y en el debate.</span>
 </label>
 </td>
 <td class="irc-row-score">—</td>
@@ -730,7 +693,7 @@ title: Rúbricas SOLO
 </div>
 <div class="gp-table-wrap">
 <table class="gp-table">
-<thead><tr><th>Estudiante</th><th>Entrega 1 (30%)</th><th>Entrega 2 (30%)</th><th>Entrega 3 (40%)</th><th>Nota final</th><th></th></tr></thead>
+<thead><tr><th>Estudiante</th><th>Entrega 1 (30%)</th><th>Debate (30%)</th><th>Entrega 3 (40%)</th><th>Nota final</th><th></th></tr></thead>
 <tbody id="gp-table-body"></tbody>
 </table>
 </div>
@@ -739,7 +702,38 @@ title: Rúbricas SOLO
 <div class="criteria-block">
 <h3>🎯 Criterios transversales</h3>
 <dl>
-  <dt>Coherencia y trazabilidad entre entregas:</dt> <dd>que la Entrega 2 retome realmente lo hallado en la Entrega 1, y que la Entrega 3 retome lo trabajado en la Entrega 2 — ponderado dentro de la calidad argumentativa de cada rúbrica.</dd>
+  <dt>Coherencia y trazabilidad entre entregas:</dt> <dd>que el debate se apoye realmente en lo hallado en la Entrega 1, y que la Entrega 3 retome lo trabajado en el diagnóstico y en el debate — ponderado dentro de la calidad argumentativa de cada rúbrica.</dd>
   <dt>No causalismo:</dt> <dd>en ningún corte se evalúa la búsqueda de "causas" o "causas de las causas": la determinación social se lee como proceso dialéctico entre lo general, lo particular y lo singular.</dd>
 </dl>
 </div>
+
+<script>
+// Migración única: la rúbrica 2 antigua (relectura crítica) pasó a ser la 3, el debate es la nueva 2 y la propuesta integradora se suprimió.
+(function () {
+  var KEY = 'determinantes', V = 'rubrica_schema_' + KEY;
+  try {
+    if (localStorage.getItem(V) === '2') return;
+    function mapSel(sel) {
+      var o = {};
+      Object.keys(sel || {}).forEach(function (k) {
+        if (k.indexOf('-e0-') > -1) o[k] = sel[k];
+        else if (k.indexOf('-e1-') > -1) o[k.replace('-e1-', '-e2-')] = sel[k];
+      });
+      return o;
+    }
+    var cur = JSON.parse(localStorage.getItem('rubrica_current_' + KEY) || 'null');
+    if (cur) { cur.selections = mapSel(cur.selections); localStorage.setItem('rubrica_current_' + KEY, JSON.stringify(cur)); }
+    var list = JSON.parse(localStorage.getItem('rubrica_saved_' + KEY) || '[]');
+    list.forEach(function (r) {
+      var s = r.scores || [], s0 = s[0] == null ? null : s[0], s1 = s[1] == null ? null : s[1];
+      r.selections = mapSel(r.selections); r.scores = [s0, null, s1];
+      var w = 0, t = 0;
+      if (s0 !== null) { w += 30; t += 30 * s0; }
+      if (s1 !== null) { w += 40; t += 40 * s1; }
+      r.final = w ? t / w : null;
+    });
+    localStorage.setItem('rubrica_saved_' + KEY, JSON.stringify(list));
+    localStorage.setItem(V, '2');
+  } catch (e) {}
+})();
+</script>

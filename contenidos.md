@@ -17,7 +17,7 @@ title: Contenidos
   <a href="#sesion-4"><span class="tl-icon">4</span><span class="tl-label">Estructurales<br>e intermedios</span></a>
   <a href="#sesion-5" class="highlight"><span class="tl-icon">5</span><span class="tl-label">Entrega 1<br>🎯</span></a>
   <a href="#sesion-6"><span class="tl-icon">6</span><span class="tl-label">Planeación<br>territorial</span></a>
-  <a href="#sesion-7" class="highlight"><span class="tl-icon">7</span><span class="tl-label">Entrega 2<br>🎯</span></a>
+  <a href="#sesion-7" class="highlight"><span class="tl-icon">7</span><span class="tl-label">Debate<br>🎯</span></a>
   <a href="#sesion-8"><span class="tl-icon">8</span><span class="tl-label">IA y<br>priorización</span></a>
   <a href="#sesion-9" class="highlight"><span class="tl-icon">9</span><span class="tl-label">Entrega 3<br>🎯</span></a>
 </div>
@@ -62,29 +62,29 @@ title: Contenidos
   {% when 6 %}
   <p><strong>Tema 3.1 — Determinantes sociales y planeación territorial en salud</strong>, leídos también desde categorías de la determinación social (modos de vida, patrones de reproducción social).</p>
   <div class="update-block" style="background:#eef6ff; border-color:#bfdcff; border-left-color:#2563eb;">
-    <h3 style="color:#1d4ed8;">🎯 Apertura de la Entrega 2</h3>
-    <p style="margin-bottom:0;">Relectura crítica del diagnóstico construido en la Entrega 1.</p>
+    <h3 style="color:#1d4ed8;">🎯 Preparación del debate</h3>
+    <p style="margin-bottom:0;">Cada equipo prepara su postura (lente asignada, autores y ejemplos de la vida real) con las preguntas del espacio <a href="{{ '/herramientas/dos-lentes.html#debate' | relative_url }}">Dos lentes → Debate</a>.</p>
   </div>
 
   {% when 7 %}
   <p><strong>Tema 3.2 — Determinantes sociales de la salud y enfoque poblacional.</strong></p>
   <div class="update-block">
-    <h3>🎯 Entrega 2 — Relectura crítica desde la Determinación Social (30%)</h3>
-    <p style="margin-bottom:0;">Documento comparativo (Entrega 1 vs. Entrega 2) articulado con instrumentos de planeación poblacional-territorial (ASIS, PDSP, POT). Ver <a href="{{ '/proyecto.html' | relative_url }}">Proyecto territorial</a> y <a href="{{ '/rubricas.html' | relative_url }}">Rúbrica SOLO — Entrega 2</a>.</p>
+    <h3>🎯 Debate en clase — Determinantes vs. determinación (30%)</h3>
+    <p style="margin-bottom:0;">Cada equipo defiende una lente ante las preguntas provocadoras, con postura inicial, réplicas y cierre. Se evalúan argumentación, calidad de autores, ejemplos de la vida real y réplica. Ver <a href="{{ '/proyecto.html' | relative_url }}">Proyecto territorial</a> y <a href="{{ '/rubricas.html' | relative_url }}">Rúbrica SOLO — Debate</a>.</p>
   </div>
 
   {% when 8 %}
   <p><strong>Tema 4.1 — Determinantes sociales, determinación social e Inteligencia Artificial.</strong> Tema 4.2 — Determinantes sociales y priorización en intervenciones individuales y colectivas en salud pública.</p>
   <div class="update-block" style="background:#eef6ff; border-color:#bfdcff; border-left-color:#2563eb;">
     <h3 style="color:#1d4ed8;">🎯 Trabajo dirigido</h3>
-    <p style="margin-bottom:0;">Construcción de la propuesta integradora para la Entrega 3.</p>
+    <p style="margin-bottom:0;">Construcción de la relectura crítica (Entrega 3) a partir del diagnóstico y de lo discutido en el debate.</p>
   </div>
 
   {% when 9 %}
   <p><strong>Cierre y retroalimentación general del curso.</strong></p>
   <div class="update-block">
-    <h3>🎯 Entrega 3 — Propuesta integradora de acción territorial (40%)</h3>
-    <p style="margin-bottom:0;">Propuesta escrita + sustentación oral + reflexión metodológica sobre las dos "cajas de herramientas" empleadas. Ver <a href="{{ '/rubricas.html' | relative_url }}">Rúbrica SOLO — Entrega 3</a>.</p>
+    <h3>🎯 Entrega 3 — Relectura crítica desde la Determinación Social (40%)</h3>
+    <p style="margin-bottom:0;">Documento comparativo (diagnóstico de la Entrega 1 vs. relectura crítica) articulado con instrumentos de planeación poblacional-territorial (ASIS, PDSP, POT). Ver <a href="{{ '/rubricas.html' | relative_url }}">Rúbrica SOLO — Entrega 3</a>.</p>
   </div>
 
   {% endcase %}

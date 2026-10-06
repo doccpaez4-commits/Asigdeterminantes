@@ -58,5 +58,5 @@ Los determinantes sociales de la salud son una de las estrategias más important
 </ul>
 
 <div class="callout">
-  <strong>Un curso sobre un mismo territorio, de principio a fin.</strong> Desde la sesión 1, cada grupo selecciona un territorio (barrio, comuna, vereda o resguardo) y trabaja sobre él en las tres entregas del semestre: diagnóstico, relectura crítica y propuesta integradora. Ver <a href="{{ '/proyecto.html' | relative_url }}">Proyecto territorial</a>.
+  <strong>Un curso sobre un mismo territorio, de principio a fin.</strong> Desde la sesión 1, cada grupo selecciona un territorio (barrio, comuna, vereda o resguardo) y trabaja sobre él en las tres actividades del semestre: diagnóstico, debate en clase y relectura crítica. Ver <a href="{{ '/proyecto.html' | relative_url }}">Proyecto territorial</a>.
 </div>
